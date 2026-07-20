@@ -279,7 +279,6 @@ export default function SignUpPage() {
           </p>
         </Surface>
       </motion.div>
-      
     </div>
   );
 }
