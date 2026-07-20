@@ -68,7 +68,7 @@ export default function AboutPage() {
 
               <Link href="/contact">
                 <Button
-                  variant="bordered"
+                  variant="outline"
                   className="h-12 px-6 rounded-xl border-white/10 text-slate-300 font-bold"
                 >
                   Contact Us

@@ -272,7 +272,7 @@ export default function SignUpPage() {
 
           <p className="text-center text-xs text-slate-400 font-light mt-4">
             Already have an account?{" "}
-            <Link href="/signin" className="text-violet-400 font-bold hover:underline transition-colors inline-flex items-center gap-0.5">
+            <Link href="/login" className="text-violet-400 font-bold hover:underline transition-colors inline-flex items-center gap-0.5">
               Sign In
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>

@@ -43,7 +43,7 @@ export default function LandingSections() {
               <p className="text-sm text-slate-400 mt-1">Acquire real-world specializations that employers value.</p>
             </div>
             <Link href="/courses">
-              <Button size="sm" variant="flat" className="bg-white/[0.06] text-slate-200 hover:bg-white/[0.1] font-semibold rounded-lg">View All Categories</Button>
+              <Button size="sm" variant="secondary" className="bg-white/[0.06] text-slate-200 hover:bg-white/[0.1] font-semibold rounded-lg">View All Categories</Button>
             </Link>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -128,30 +128,66 @@ export default function LandingSections() {
       </section>
 
       {/* ── SECTION 5: TESTIMONIALS ── */}
-      <section className="py-20 max-w-7xl mx-auto px-6 border-b border-white/[0.04]">
-        <div className="text-center max-w-xl mx-auto mb-14">
-          <h2 className="text-2xl md:text-3xl font-black tracking-tight text-white">Loved by Driven Learners</h2>
-          <p className="text-sm text-slate-400 mt-2">See how our structured tracking helps students maintain consistent coding workflows.</p>
+<section className="py-20 max-w-7xl mx-auto px-6 border-b border-white/[0.04]">
+  <div className="text-center max-w-xl mx-auto mb-14">
+    <h2 className="text-2xl md:text-3xl font-black tracking-tight text-white">
+      Loved by Driven Learners
+    </h2>
+
+    <p className="text-sm text-slate-400 mt-2">
+      See how our structured tracking helps students maintain consistent coding workflows.
+    </p>
+  </div>
+
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {[
+      {
+        name: "Tahmid Hasan",
+        role: "Diploma Student, CST",
+        text: "The mapping of Microprocessor concepts alongside clean React modules completely saved my 5th semester preparations.",
+      },
+      {
+        name: "Ahsan Kabir",
+        role: "Junior Frontend Engineer",
+        text: "Structured Next.js modules helped me polish my personal portfolio website and pass early placement requirements effortlessly.",
+      },
+      {
+        name: "Sajib Ahmed",
+        role: "Learner, Batch 13",
+        text: "The absolute focus on UI design parameters like glassmorphism and motion flows makes coding exceptionally fun here.",
+      },
+    ].map((testi, i) => (
+      <Card
+        key={i}
+        className="p-5 rounded-2xl border border-white/[0.06] bg-white/[0.01] shadow-none flex flex-col justify-between space-y-4"
+      >
+        <p className="text-xs text-slate-300 italic leading-relaxed">
+          "{testi.text}"
+        </p>
+
+        <div className="flex items-center gap-3 pt-2 border-t border-white/[0.04]">
+          <Avatar size="sm">
+            <img
+              src={`https://i.pravatar.cc/150?img=${i + 11}`}
+              alt={testi.name}
+              className="w-full h-full object-cover rounded-full"
+            />
+          </Avatar>
+
+          <div>
+            <h4 className="text-xs font-bold text-slate-200">
+              {testi.name}
+            </h4>
+
+            <p className="text-[10px] text-slate-500 font-semibold">
+              {testi.role}
+            </p>
+          </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            { name: "Tahmid Hasan", role: "Diploma Student, CST", text: "The mapping of Microprocessor concepts alongside clean React modules completely saved my 5th semester preparations." },
-            { name: "Ahsan Kabir", role: "Junior Frontend Engineer", text: "Structured Next.js modules helped me polish my personal portfolio website and pass early placement requirements effortlessly." },
-            { name: "Sajib Ahmed", role: "Learner, Batch 13", text: "The absolute focus on UI design parameters like glassmorphism and motion flows makes coding exceptionally fun here." }
-          ].map((testi, i) => (
-            <Card key={i} className="p-5 rounded-2xl border border-white/[0.06] bg-white/[0.01] shadow-none flex flex-col justify-between space-y-4">
-              <p className="text-xs text-slate-300 italic leading-relaxed">"{testi.text}"</p>
-              <div className="flex items-center gap-3 pt-2 border-t border-white/[0.04]">
-                <Avatar size="sm" src={`https://i.pravatar.cc/150?img=${i + 11}`} />
-                <div>
-                  <h4 className="text-xs font-bold text-slate-200">{testi.name}</h4>
-                  <p className="text-[10px] text-slate-500 font-semibold">{testi.role}</p>
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
-      </section>
+      </Card>
+    ))}
+  </div>
+</section>
 
       {/* ── SECTION 6: FAQ ── */}
       <section className="py-20 bg-slate-900/10 border-b border-white/[0.04]">

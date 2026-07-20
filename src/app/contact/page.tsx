@@ -92,7 +92,7 @@ export default function ContactPage() {
 
                 <Button
                   onPress={() => setSubmitted(false)}
-                  variant="bordered"
+                  variant="outline"
                   className="mt-6 border-white/10 text-slate-300 rounded-xl"
                 >
                   Send Another Message
@@ -101,33 +101,45 @@ export default function ContactPage() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-5">
-                  <Input
-                    label="Your Name"
-                    placeholder="Enter your name"
-                    variant="bordered"
-                    required
-                  />
+                  <div>
+                    <label className="block text-sm font-medium text-slate-300 mb-2">
+                      Your Name
+                    </label>
+
+                    <Input
+                      placeholder="Enter your name"
+                      variant="secondary"
+                      required
+                    />
+                  </div>
 
                   <Input
-                    label="Email Address"
                     type="email"
                     placeholder="you@example.com"
-                    variant="bordered"
+                    variant="secondary"
                     required
                   />
                 </div>
 
-                <Input
-                  label="Subject"
-                  placeholder="How can we help you?"
-                  variant="bordered"
-                  required
-                />
+                <div>
+                  <label className="block text-sm font-medium text-slate-300 mb-2">
+                    Subject
+                  </label>
 
-                <TextArea
-                  label="Message"
+                  <Input
+                    placeholder="How can we help you?"
+                    variant="secondary"
+                    required
+                  />
+                </div>
+
+                <label className="block text-sm font-medium text-slate-300 mb-2">
+                  Message
+                </label>
+
+                <Input
                   placeholder="Write your message here..."
-                  variant="bordered"
+                  variant="secondary"
                   className="min-h-32"
                   required
                 />

@@ -69,7 +69,7 @@ export default function ManageItemsPage() {
       {loading ? (
         <div className="flex items-center justify-center min-h-80">
           <div className="flex items-center gap-3 bg-slate-900/90 p-5 rounded-xl border border-white/10">
-            <Spinner color="secondary" size="sm" />
+            <Spinner color="accent" size="sm" />
 
             <span className="text-sm text-slate-300 font-medium">
               Fetching your courses...
@@ -135,31 +135,31 @@ export default function ManageItemsPage() {
                   </td>
 
                   <td className="px-6 py-5 text-center">
-  <div className="flex items-center justify-center gap-3">
-    {/* View Button */}
-    <Link href={`/courses/${course._id}`}>
-      <Button
-        size="sm"
-        variant="flat"
-        className="font-bold rounded-xl border border-transparent bg-white/[0.04] text-slate-300 hover:text-white hover:border-violet-500/50 hover:bg-violet-500/10 hover:shadow-[0_0_15px_rgba(139,92,246,0.15)] transition-all duration-300 transform hover:-translate-y-0.5"
-      >
-        View
-      </Button>
-    </Link>
+                    <div className="flex items-center justify-center gap-3">
+                      {/* View Button */}
+                      <Link href={`/courses/${course._id}`}>
+                        <Button
+                          size="sm"
+                          variant="secondary"
+                          className="font-bold rounded-xl border border-transparent bg-white/[0.04] text-slate-300 hover:text-white hover:border-violet-500/50 hover:bg-violet-500/10 hover:shadow-[0_0_15px_rgba(139,92,246,0.15)] transition-all duration-300 transform hover:-translate-y-0.5"
+                        >
+                          View
+                        </Button>
+                      </Link>
 
-    {/* Delete Button */}
-    <Button
-      color="danger"
-      size="sm"
-      variant="flat"
-      onPress={() => handleDelete(course._id)}
-      startContent={<Trash2 className="w-4 h-4 transition-transform group-hover:scale-110" />}
-      className="group font-bold rounded-xl border border-transparent bg-danger/10 text-danger hover:border-danger/40 hover:bg-danger/20 hover:shadow-[0_0_15px_rgba(243,18,96,0.15)] transition-all duration-300 transform hover:-translate-y-0.5"
-    >
-      Delete
-    </Button>
-  </div>
-</td>
+                      {/* Delete Button */}
+                      <Button
+                        
+                        size="sm"
+                        variant="danger-soft"
+                        onPress={() => handleDelete(course._id)}
+                        
+                        className="group font-bold rounded-xl border border-transparent bg-danger/10 text-danger hover:border-danger/40 hover:bg-danger/20 hover:shadow-[0_0_15px_rgba(243,18,96,0.15)] transition-all duration-300 transform hover:-translate-y-0.5"
+                      >
+                        Delete
+                      </Button>
+                    </div>
+                  </td>
                 </tr>
               ))}
             </tbody>

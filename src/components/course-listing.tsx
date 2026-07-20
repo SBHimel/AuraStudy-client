@@ -71,7 +71,7 @@ export function CourseCard({ course }: CourseCardProps) {
 // Data লোড হওয়ার সময় দেখানোর জন্য Skeleton Loader
 export function CourseSkeleton() {
   return (
-    <Card className="w-full h-full border border-white/[0.08] bg-slate-900/20" radius="lg">
+    <Card className="w-full h-full border border-white/[0.08] bg-slate-900/20">
       <Skeleton className="rounded-t-xl">
         <div className="h-48 w-full bg-slate-800" />
       </Skeleton>

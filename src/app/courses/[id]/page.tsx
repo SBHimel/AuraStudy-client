@@ -38,7 +38,7 @@ export default function CourseDetailsPage() {
   if (loading)
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-950">
-        <Spinner size="lg" color="secondary" />
+        <Spinner size="lg" color="accent" />
       </div>
     );
   if (!course)
@@ -177,8 +177,7 @@ export default function CourseDetailsPage() {
 
             <Button
   onPress={handleEnroll}
-  isLoading={enrolling}
-  className="w-full h-12 bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-bold text-base shadow-lg shadow-violet-500/20 rounded-xl"
+  className="w-full h-12 bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-bold"
 >
   {enrolling ? "Enrolling..." : "Enroll in Course"}
 </Button>

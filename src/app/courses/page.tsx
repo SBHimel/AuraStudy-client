@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Input, Button, Pagination, Skeleton } from "@heroui/react";
 import { fetchExploreCourses } from "@/lib/api";
 import Link from "next/link";
+import RoadmapGenerator from "@/components/RoadmapGenerator";
 
 export default function ExploreCoursesPage() {
   const [courses, setCourses] = useState<any[]>([]);
@@ -65,6 +66,9 @@ export default function ExploreCoursesPage() {
       {/* Header */}
       <div className="mb-10 space-y-4">
         <h1 className="text-3xl font-black">Explore Our Courses</h1>
+
+        {/* AI Roadmap Generator (Feature A) এখানে বসানো হলো */}
+        <RoadmapGenerator />
 
         {/* Search & Filter Area */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 bg-slate-900/50 p-4 rounded-2xl border border-white/5">
@@ -146,7 +150,6 @@ export default function ExploreCoursesPage() {
 
           {/* Reset */}
           <Button
-            color="secondary"
             aria-label="Reset all filters"
             onPress={handleResetFilters}
             className="h-10"
@@ -257,17 +260,26 @@ export default function ExploreCoursesPage() {
     </Button>
 
     {/* Page Numbers */}
-    <Pagination
-      total={totalPages}
-      page={page}
-      onChange={(newPage) => {
-        setPage(newPage);
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }}
-      color="secondary"
-      size="lg"
-      variant="flat"
-    />
+    <div className="flex items-center gap-2">
+  {Array.from({ length: totalPages }, (_, index) => index + 1).map(
+    (pageNumber) => (
+      <Button
+        key={pageNumber}
+        onPress={() => {
+          setPage(pageNumber);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+        className={`min-w-10 h-10 ${
+          page === pageNumber
+            ? "bg-violet-600 text-white"
+            : "bg-slate-800 text-slate-300"
+        }`}
+      >
+        {pageNumber}
+      </Button>
+    ),
+  )}
+</div>
 
     {/* Next */}
     <Button

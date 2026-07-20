@@ -80,7 +80,7 @@ export default function HeroSection() {
               </Button>
             </Link>
             <Link href="/courses">
-              <Button variant="bordered" className="h-11 px-6 rounded-xl font-bold text-sm text-slate-300 border-white/[0.12] hover:bg-white/[0.05] hover:text-white transition-all">
+              <Button variant="outline" className="h-11 px-6 rounded-xl font-bold text-sm text-slate-300 border-white/[0.12] hover:bg-white/[0.05] hover:text-white transition-all">
                 Browse Courses
               </Button>
             </Link>
