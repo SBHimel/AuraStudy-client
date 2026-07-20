@@ -57,6 +57,7 @@ export default function NotFound() {
           Need help? Feel free to ask our <span className="text-violet-400 font-medium">AuraStudy AI Assistant</span> on the bottom right corner!
         </p>
       </div>
+      
     </div>
   );
 }
