@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+
+@theme {
+  --color-primary: #4f46e5;    /* Indigo - মেইন কালার */
+  --color-secondary: #14b8a6;  /* Teal - অ্যাকসেন্ট কালার */
+  --color-accent: #f9fafb;     /* Off-white/Light Gray - ব্যাকগ্রাউন্ড */
+}
