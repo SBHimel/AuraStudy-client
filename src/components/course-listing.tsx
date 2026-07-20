@@ -117,7 +117,6 @@ export function CourseSkeleton() {
           <div className="h-10 bg-slate-800" />
         </Skeleton>
       </CardFooter>
-      
     </Card>
   );
 }
