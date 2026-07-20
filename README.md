@@ -6,6 +6,7 @@
   <p>A feature-rich, high-performance, and beautifully designed educational platform built for modern students, instructors, and administrators.</p>
 
   <!-- Badges -->
+  
   <p>
     <img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
     <img src="https://img.shields.io/badge/HeroUI-Layout-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="HeroUI" />
