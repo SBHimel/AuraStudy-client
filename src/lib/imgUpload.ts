@@ -19,7 +19,6 @@ export const imageUpload = async (image: File): Promise<string | null> => {
       }
     );
 
-    
     const data = await res.json();
 
     if (data.success) {
