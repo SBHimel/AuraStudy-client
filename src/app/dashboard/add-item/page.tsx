@@ -138,6 +138,7 @@ export default function AddItemPage() {
         >
           {loading ? "Publishing..." : "Publish Course"}
         </Button>
+        
       </form>
     </div>
   );
